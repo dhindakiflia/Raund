@@ -80,20 +80,6 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Destination" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxBackgroundColor="@color/white"
-            app:boxBackgroundMode="filled"
-            app:boxStrokeColor="@color/black"
-            app:hintTextColor="@color/black">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:hint="Sender" />
         </com.google.android.material.textfield.TextInputLayout>
 

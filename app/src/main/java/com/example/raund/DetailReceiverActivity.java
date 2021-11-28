@@ -30,7 +30,7 @@ public class DetailReceiverActivity extends AppCompatActivity implements OnMapRe
         nextreceiver_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DetailSenderActivity();
+                ChooseTravelPaketActivity();
             }
         });
 
@@ -39,11 +39,11 @@ public class DetailReceiverActivity extends AppCompatActivity implements OnMapRe
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
-
-    public void DetailSenderActivity(){
-        Intent intent = new Intent(this, DetailSenderActivity.class);
+    public void ChooseTravelPaketActivity(){
+        Intent intent = new Intent(this, ChooseTravelPaketActivity.class);
         startActivity(intent);
     }
+
 
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;

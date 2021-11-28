@@ -79,7 +79,7 @@ public class HomeActivity extends AppCompatActivity {
         BtnDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DetailReceiverActivity();
+                DetailSenderActivity();
             }
         });
 
@@ -90,8 +90,8 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DataTravelActivity.class);
         startActivity(intent);
     }
-    public void DetailReceiverActivity() {
-        Intent intent = new Intent(this, DetailReceiverActivity.class);
+    public void DetailSenderActivity() {
+        Intent intent = new Intent(this, DetailSenderActivity.class);
         startActivity(intent);
     }
 

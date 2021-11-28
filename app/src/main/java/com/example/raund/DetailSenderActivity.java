@@ -32,7 +32,7 @@ public class DetailSenderActivity extends AppCompatActivity implements OnMapRead
         nextsender_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ChooseTravelPaketActivity();
+                DetailReceiverActivity();
             }
         });
 
@@ -43,8 +43,8 @@ public class DetailSenderActivity extends AppCompatActivity implements OnMapRead
 
     }
 
-    public void ChooseTravelPaketActivity(){
-        Intent intent = new Intent(this, ChooseTravelPaketActivity.class);
+    public void DetailReceiverActivity(){
+        Intent intent = new Intent(this, DetailReceiverActivity.class);
         startActivity(intent);
     }
 

@@ -122,6 +122,9 @@ public class TravelListActivity extends AppCompatActivity implements KelasAdapte
     @Override
     public void onClick(View view, TravelList travelList) {
         Intent intent = new Intent(this, confirmTravel.class);
+        intent.putExtra("nama_mobil",travelList.nama_mobil);
+        intent.putExtra("tgl",travelList.tanggal_travel);
+        intent.putExtra("harga",travelList.harga_travel);
         startActivity(intent);
     }
 }

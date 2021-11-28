@@ -73,6 +73,14 @@
             android:name=".KonfirmDeliveryActivity"
             android:exported="true" />
         <activity
+            android:name=".SAddressActivity"
+            android:exported="true"
+            android:label="@string/title_activity_s_address"/>
+        <activity
+            android:name=".NoSaveAddressActivity"
+            android:exported="true"
+            android:label="@string/title_activity_no_saved_address"/>
+        <activity
             android:name=".HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_home"/>
@@ -90,7 +98,12 @@
             android:exported="true"/>
         <activity
             android:name=".SavedAddressActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/title_activity_saved_address"/>
+        <activity
+            android:name=".ChangePassActivity"
+            android:exported="true"
+            android:label="@string/title_activity_changepass" />
         <activity
             android:name=".ChooseTravelPaketActivity"
             android:exported="true" />

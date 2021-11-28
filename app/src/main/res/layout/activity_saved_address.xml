@@ -21,87 +21,70 @@
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="415dp"
             tools:context=".MapsActivity" />
+
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="408dp"
-        android:layout_height="335dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="0dp"
+        android:layout_height="267dp"
         android:background="@drawable/white_bg"
-        android:orientation="vertical"
-        android:padding="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Saved Address"
+            android:id="@+id/textView27"
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="16dp"
+            android:text="Set Address Name"
             android:textColor="@color/purple_500"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="15dp" />
+        <EditText
+            android:id="@+id/textLoc"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Current Location"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView27"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="@+id/textView27"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/currenloc_txtinputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxBackgroundColor="@color/white"
-            app:boxBackgroundMode="filled"
-            app:boxStrokeColor="@color/black"
-            app:hintTextColor="@color/black"
-            app:startIconDrawable="@android:drawable/ic_menu_mylocation">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/currenloc_txtinputEdit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Current Location"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="11dp" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/addressnametxtinputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxBackgroundColor="@color/white"
-            app:boxBackgroundMode="filled"
-            app:boxStrokeColor="@color/black"
-            app:hintTextColor="@color/black"
-            app:startIconDrawable="@android:drawable/ic_menu_save">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/addressname_txtinputEdit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Address Name"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="11dp" />
+        <EditText
+            android:id="@+id/textAddress"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Address Name"
+            android:inputType="textPersonName"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textLoc"
+            app:layout_constraintStart_toStartOf="@+id/textLoc"
+            app:layout_constraintTop_toBottomOf="@+id/textLoc" />
 
         <Button
             android:id="@+id/save_btn"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            android:text="Save"
-            android:textAllCaps="false"
-            android:textSize="16sp" />
-    </LinearLayout>
+            android:text="SAVE"
+            app:layout_constraintEnd_toEndOf="@+id/textAddress"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/textAddress"
+            app:layout_constraintTop_toBottomOf="@+id/textAddress" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

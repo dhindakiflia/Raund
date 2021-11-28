@@ -32,13 +32,14 @@
         <entry key="..\:/Raund/app/src/main/res/drawable/rounded_white_bg.xml" value="0.2203125" />
         <entry key="..\:/Raund/app/src/main/res/drawable/rounded_white_card.xml" value="0.2203125" />
         <entry key="..\:/Raund/app/src/main/res/drawable/white_bg.xml" value="0.21614583333333334" />
-        <entry key="..\:/Raund/app/src/main/res/layout/activity_change_password.xml" value="0.2" />
+        <entry key="..\:/Raund/app/src/main/res/layout/activity_address.xml" value="0.18659420289855072" />
+        <entry key="..\:/Raund/app/src/main/res/layout/activity_change_password.xml" value="0.25" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_choose_travel_paket.xml" value="0.12" />
-        <entry key="..\:/Raund/app/src/main/res/layout/activity_confirm_travel.xml" value="0.18" />
+        <entry key="..\:/Raund/app/src/main/res/layout/activity_confirm_travel.xml" value="0.25" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_confirmdelivery.xml" value="0.2" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_data_travel.xml" value="0.22" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_delivery_history.xml" value="0.25" />
-        <entry key="..\:/Raund/app/src/main/res/layout/activity_detail_receiver.xml" value="0.1" />
+        <entry key="..\:/Raund/app/src/main/res/layout/activity_detail_receiver.xml" value="0.22" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_detail_sender.xml" value="0.25" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_dp_paket.xml" value="0.2" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_edit_profile.xml" value="0.20416666666666666" />
@@ -52,11 +53,14 @@
         <entry key="..\:/Raund/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_maps.xml" value="0.1" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_maps2.xml" value="0.1" />
+        <entry key="..\:/Raund/app/src/main/res/layout/activity_no_save_address.xml" value="0.22" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_notifikasi.xml" value="0.11458333333333333" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_ongoing.xml" value="0.1" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_profiledit.xml" value="0.25" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_regis.xml" value="0.18" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_reshedule_jadwal.xml" value="0.1" />
+        <entry key="..\:/Raund/app/src/main/res/layout/activity_s_address.xml" value="0.1" />
+        <entry key="..\:/Raund/app/src/main/res/layout/activity_save_address.xml" value="0.18659420289855072" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_saved_address.xml" value="0.22" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_setting.xml" value="0.25" />
         <entry key="..\:/Raund/app/src/main/res/layout/activity_tes.xml" value="0.25" />

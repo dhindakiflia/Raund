@@ -73,6 +73,10 @@ public class ChooseTravelPaketActivity extends AppCompatActivity implements Adap
     @Override
     public void onClick(View view, ChooseTravel chooseTravel) {
         Intent intent = new Intent(this, KonfirmDeliveryActivity.class);
+        intent.putExtra("nama_travel",chooseTravel.jenisMobil);
+        intent.putExtra("tgl",chooseTravel.tanggal);
+        intent.putExtra("harga",chooseTravel.harga);
+        intent.putExtra("pukul",chooseTravel.waktu);
         startActivity(intent);
     }
 }

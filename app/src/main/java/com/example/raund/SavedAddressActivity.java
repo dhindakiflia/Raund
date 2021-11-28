@@ -7,7 +7,6 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.raund.adapter.AdapterRecyclerView;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -31,7 +30,7 @@ public class SavedAddressActivity extends AppCompatActivity implements OnMapRead
         save_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TravelListActivity();
+                SAddressActivity();
             }
         });
 
@@ -44,8 +43,8 @@ public class SavedAddressActivity extends AppCompatActivity implements OnMapRead
 
     }
 
-    public void TravelListActivity() {
-        Intent intent = new Intent(this, AdapterRecyclerView.class);
+    public void SAddressActivity() {
+        Intent intent = new Intent(this, SAddressActivity.class);
         startActivity(intent);
     }
 

@@ -33,7 +33,7 @@ public class SettingActivity extends AppCompatActivity {
         SavedAddressTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SavedAddressActivity();
+                NoSaveAddressActivity();
             }
         });
 
@@ -51,8 +51,8 @@ public class SettingActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ProfileEditActivity.class);
         startActivity(intent);
     }
-    public void SavedAddressActivity(){
-        Intent intent = new Intent(this, SavedAddressActivity.class);
+    public void NoSaveAddressActivity(){
+        Intent intent = new Intent(this, NoSaveAddressActivity.class);
         startActivity(intent);
     }
     public void ChangePassActivity(){
