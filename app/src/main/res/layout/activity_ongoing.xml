@@ -40,8 +40,7 @@
                     android:padding="3dp"
                     android:text="Ongoing"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
-                    />
+                    android:textColor="@color/black" />
 
                 <Button
                     android:id="@+id/BtnHistory"

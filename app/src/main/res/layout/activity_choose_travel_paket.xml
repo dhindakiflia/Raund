@@ -83,7 +83,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="0dp"
             android:scrollbars="vertical"
-            tools:listitem="@layout/list_choose_travel" />
+            tools:listitem="@layout/item_card_travel_list" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
