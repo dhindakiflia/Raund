@@ -1,19 +1,25 @@
 package com.example.raund.model;
 
 public class ChooseTravel {
+    public String id_mobil;
+    public String id_travel_agent;
+    public String nama_travel;
+    public String nama_mobil;
     public String jenisMobil;
-    public String tanggal;
-    public String waktu;
-    public String kapasitas;
-    public String harga;
-    public String jumlah;
+    public String jam_departure;
+    public int kapasitas;
+    public int harga;
+    public String gambar;
 
-    public ChooseTravel(String jenisMobil, String tanggal, String waktu, String jumlah,String harga, String kapasitas) {
+    public ChooseTravel(String id_mobil, String id_travel_agent,String nama_travel, String nama_mobil,String jenisMobil, String jam_departure, int kapasitas ,int harga, String gambar) {
+        this.id_mobil = id_mobil;
+        this.id_travel_agent = id_travel_agent;
+        this.nama_travel = nama_travel;
+        this.nama_mobil = nama_mobil;
         this.jenisMobil = jenisMobil;
-        this.tanggal = tanggal;
-        this.waktu = waktu;
-        this.jumlah = jumlah;
-        this.harga = harga;
+        this.jam_departure = jam_departure;
         this.kapasitas = kapasitas;
+        this.harga = harga;
+        this.gambar = gambar;
     }
 }

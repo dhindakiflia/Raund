@@ -19,15 +19,16 @@ public class KelasAdapter extends RecyclerView.Adapter<KelasAdapter.KelasViewHol
     ArrayList<TravelList> listdata = new ArrayList<>();
 
     public class KelasViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView nama_travel, nama_mobil, tanggal_travel, available, harga_travel;
+        TextView namaTravel, namaMobil, jamDeparture, kapasitas, travelFee, deliveryFee;
         CardView cvTravelList;
         public KelasViewHolder(@NonNull View itemView){
             super(itemView);
-            nama_travel = itemView.findViewById(R.id.nama_travel);
-            nama_mobil = itemView.findViewById(R.id.nama_mobil);
-            tanggal_travel = itemView.findViewById(R.id.tanggal_travel);
-            available = itemView.findViewById(R.id.available);
-            harga_travel = itemView.findViewById(R.id.harga_travel);
+            namaTravel = itemView.findViewById(R.id.nama_travel);
+            namaMobil = itemView.findViewById(R.id.namaTravelDelivery);
+            jamDeparture = itemView.findViewById(R.id.jam_departure);
+            kapasitas = itemView.findViewById(R.id.available);
+            travelFee = itemView.findViewById(R.id.harga_travel);
+            deliveryFee = itemView.findViewById(R.id.harga_delivery);
             cvTravelList = itemView.findViewById(R.id.cvTravelList);
             itemView.setOnClickListener(this);
         }
@@ -40,8 +41,8 @@ public class KelasAdapter extends RecyclerView.Adapter<KelasAdapter.KelasViewHol
     }
 
     public void setListdata(ArrayList<TravelList> listdata) {
-
         this.listdata = listdata;
+        notifyDataSetChanged();
 
     }
 
@@ -67,12 +68,12 @@ public class KelasAdapter extends RecyclerView.Adapter<KelasAdapter.KelasViewHol
     public void onBindViewHolder(@NonNull KelasViewHolder holder, int position) {
         TravelList travelList = listdata.get(position);
 
-        holder.nama_travel.setText(travelList.nama_travel);
-        holder.nama_mobil.setText(travelList.nama_mobil);
-        holder.tanggal_travel.setText(travelList.tanggal_travel);
-        holder.available.setText(travelList.available);
-        holder.harga_travel.setText(travelList.harga_travel);
-
+        holder.namaTravel.setText(travelList.nama_travel);
+        holder.namaMobil.setText(travelList.nama_mobil);
+        holder.jamDeparture.setText(travelList.jam_departure);
+        holder.kapasitas.setText(Integer.toString(travelList.available));
+        holder.travelFee.setText(Integer.toString(travelList.harga_travel));
+        holder.deliveryFee.setText(Integer.toString(travelList.harga_delivery));
     }
 
 

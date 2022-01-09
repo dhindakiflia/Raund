@@ -80,10 +80,10 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
         ChooseTravel chooseTravel = ListChooseTravel.get(position);
 
         holder.textItemTravel.setText(chooseTravel.jenisMobil);
-        holder.textTanggal.setText(chooseTravel.tanggal);
-        holder.textPukul.setText(chooseTravel.waktu);
+//        holder.textTanggal.setText(chooseTravel.tanggal);
+        holder.textPukul.setText(chooseTravel.jam_departure);
         holder.textHarga.setText(chooseTravel.harga);
-        holder.textJumlah.setText(chooseTravel.jumlah);
+//        holder.textJumlah.setText(chooseTravel.jumlah);
         holder.textKapasitas.setText(chooseTravel.kapasitas);
     }
 

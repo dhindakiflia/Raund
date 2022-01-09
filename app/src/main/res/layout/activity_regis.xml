@@ -58,6 +58,7 @@
             android:paddingRight="30dp">
 
             <EditText
+                android:id="@+id/emailRegis"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="25dp"
@@ -67,40 +68,44 @@
                 android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/namaRegis"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="20dp"
 
+                android:layout_marginTop="20dp"
                 android:background="@drawable/form"
                 android:hint="Nama"
                 android:paddingLeft="10dp"
                 android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/nimRegis"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="20dp"
 
+                android:layout_marginTop="20dp"
                 android:background="@drawable/form"
                 android:hint="NIM"
                 android:paddingLeft="10dp"
                 android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/telRegis"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="20dp"
 
+                android:layout_marginTop="20dp"
                 android:background="@drawable/form"
                 android:hint="No Telepon"
                 android:paddingLeft="10dp"
                 android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/passRegis"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="20dp"
 
+                android:layout_marginTop="20dp"
                 android:background="@drawable/form"
                 android:hint="Password"
                 android:paddingLeft="10dp"
@@ -115,6 +120,7 @@
                 android:background="@drawable/form_pink"
                 android:elevation="30dp"
                 android:includeFontPadding="false"
+                android:onClick="Register"
                 android:paddingLeft="10dp"
                 android:text="Sign-Up"
                 android:textAlignment="center"

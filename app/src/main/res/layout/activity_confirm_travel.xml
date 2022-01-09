@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="5"
-    tools:context=".confirmdelivery">
+    tools:context=".confirmTravel">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
 
 
             <TextView
-                android:id="@+id/namaMobil"
+                android:id="@+id/namaTravel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -48,15 +48,15 @@
                 tools:layout_editor_absoluteY="62dp" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/namaMobil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginVertical="13dp"
+                android:layout_marginLeft="80dp"
                 android:fontFamily="sans-serif"
                 android:text="Travel"
                 android:textColor="@color/black"
                 android:textSize="22sp"
-                android:layout_marginLeft="80dp"
-                android:layout_marginVertical="13dp"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="94dp"
                 tools:layout_editor_absoluteY="74dp" />
@@ -73,6 +73,7 @@
         </RelativeLayout>
 
         <!--    From-->
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
@@ -93,17 +94,18 @@
                 android:layout_marginVertical="5dp"
                 android:layout_toRightOf="@id/imageView4"
                 android:textSize="14sp" />
+
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/textView3"
+                android:layout_toRightOf="@id/imageView4"
                 android:fontFamily="sans-serif"
                 android:text="Padang"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_below="@id/textView3"
-                android:layout_toRightOf="@id/imageView4"/>
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
@@ -152,6 +154,7 @@
         </RelativeLayout>
 
         <!--    Depart arrive-->
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -209,14 +212,14 @@
                 android:id="@+id/pukulBerangkat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:text="08:00 WIB"
-                android:textSize="16sp"
-                android:textStyle="normal"
-                android:textColor="@color/black"
                 android:layout_below="@id/tglBerangkat"
                 android:layout_alignParentLeft="true"
-                android:layout_marginHorizontal="30dp"/>
+                android:layout_marginHorizontal="30dp"
+                android:fontFamily="sans-serif"
+                android:text="08:00 WIB"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="normal" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -268,43 +271,35 @@
 <!--                android:textSize="14sp"/>-->
 
             <!--        inc dec button-->
+
             <RelativeLayout
-                android:layout_width="80dp"
-                android:layout_height="25dp"
+                android:layout_width="133dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/rounded_salmon_stroke"
-                >
+                android:layout_marginTop="20dp">
 
-                <Button
-                    android:id="@+id/buttonIncreas"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:background="#00FFFFFF"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
 
-                    android:layout_alignParentLeft="true"
-                    android:text="-"
-                    android:textStyle="bold"></Button>
+                    <EditText
+                        android:id="@+id/editTextPessanger"
+                        android:layout_width="55dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textSize="14sp" />
 
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="1"></TextView>
-
-
-                <Button
-                    android:id="@+id/buttonDecreas"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-
-                    android:layout_alignParentRight="true"
-                    android:background="#00FFFFFF"
-                    android:text="+"
-                    android:textStyle="bold"></Button>
-
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="hitungtotalTravel"
+                        android:text="OK" />
+                </LinearLayout>
 
             </RelativeLayout>
 
@@ -314,8 +309,6 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="264dp">
-
-            ">
 
             <RelativeLayout
                 android:id="@+id/payment_box"
@@ -402,6 +395,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
+                android:onClick="Travel"
                 android:layout_marginStart="37dp"
                 android:layout_marginEnd="38dp"
                 android:layout_marginBottom="22dp"

@@ -19,22 +19,22 @@ public class OnGoingAdapterRecyclerView extends RecyclerView.Adapter<OnGoingAdap
     ArrayList<OnGoing> listdata = new ArrayList<>();
 
     public class KelasViewHolder2 extends RecyclerView.ViewHolder implements View.OnClickListener{
-    TextView nama_travel_og, destinationDelivery_og, fromDelivery_og, tgl_departure_og, tgl_arrival_og, jam_datang_og, jam_pergi_og, harga_og;
-    Button BtnReschedule;
-    public KelasViewHolder2(@NonNull View itemView) {
-        super(itemView);
-        nama_travel_og = itemView.findViewById(R.id.nama_travel_og);
-        fromDelivery_og = itemView.findViewById(R.id.fromDelivery_og);
-        destinationDelivery_og = itemView.findViewById(R.id.destinationDelivery_og);
-        tgl_departure_og = itemView.findViewById(R.id.tgl_departure_og);
-        tgl_arrival_og = itemView.findViewById(R.id.tgl_arrival_og);
-        jam_datang_og = itemView.findViewById(R.id.jam_datang_og);
-        jam_pergi_og = itemView.findViewById(R.id.jam_pergi_og);
-        harga_og = itemView.findViewById(R.id.harga_og);
-        BtnReschedule = itemView.findViewById(R.id.BtnReschedule);
-        itemView.setOnClickListener(this);
+        TextView nama_travel_og, destinationDelivery_og, fromDelivery_og, tgl_departure_og, tgl_arrival_og, jam_datang_og, jam_pergi_og, harga_og;
+        Button BtnReschedule;
+        public KelasViewHolder2(@NonNull View itemView) {
+            super(itemView);
+            nama_travel_og = itemView.findViewById(R.id.nama_travel_og);
+            fromDelivery_og = itemView.findViewById(R.id.fromDelivery_og);
+            destinationDelivery_og = itemView.findViewById(R.id.destinationDelivery_og);
+            tgl_departure_og = itemView.findViewById(R.id.tgl_departure_og);
+            tgl_arrival_og = itemView.findViewById(R.id.tgl_arrival_og);
+            jam_datang_og = itemView.findViewById(R.id.jam_datang_og);
+            jam_pergi_og = itemView.findViewById(R.id.jam_pergi_og);
+            harga_og = itemView.findViewById(R.id.harga_og);
+            BtnReschedule = itemView.findViewById(R.id.BtnReschedule);
+            itemView.setOnClickListener(this);
 
-    }
+        }
         @Override
         public void onClick(View view) {
             if (listener != null){
@@ -75,10 +75,10 @@ public class OnGoingAdapterRecyclerView extends RecyclerView.Adapter<OnGoingAdap
         holder.nama_travel_og.setText(ongoing.nama_travel_og);
         holder.fromDelivery_og.setText(ongoing.fromDelivery_og);
         holder.destinationDelivery_og.setText(ongoing.destinationDelivery_og);
-        holder.tgl_departure_og.setText(ongoing.tgl_departure_og);
-        holder.tgl_arrival_og.setText(ongoing.tgl_arrival_og);
-        holder.jam_datang_og.setText(ongoing.jam_datang_og);
-        holder.jam_pergi_og.setText(ongoing.jam_pergi_og);
+        holder.tgl_departure_og.setText((CharSequence) ongoing.tgl_departure_og);
+        holder.tgl_arrival_og.setText((CharSequence) ongoing.tgl_arrival_og);
+        holder.jam_datang_og.setText((CharSequence) ongoing.jam_datang_og);
+        holder.jam_pergi_og.setText((CharSequence) ongoing.jam_pergi_og);
         holder.harga_og.setText(ongoing.harga_og);
 
     }
@@ -89,13 +89,3 @@ public class OnGoingAdapterRecyclerView extends RecyclerView.Adapter<OnGoingAdap
         return listdata.size();
     }
 }
-
-
-
-
-
-
-
-
-
-

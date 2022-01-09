@@ -25,7 +25,7 @@ public class ResheduleJadwalActivity extends AppCompatActivity implements OnMapR
         setContentView(R.layout.activity_reshedule_jadwal);
 
         //Button
-        reschedule_btn = findViewById(R.id.nextreceiver_btn);
+        reschedule_btn = findViewById(R.id.nextBtn);
         reschedule_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

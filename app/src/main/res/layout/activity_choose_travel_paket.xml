@@ -8,54 +8,25 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="113dp"
+        android:layout_width="408dp"
+        android:layout_height="50dp"
         app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
         app:layout_constraintStart_toStartOf="@+id/relativeLayout"
         app:layout_constraintTop_toTopOf="parent">
-
-        <EditText
-            android:id="@+id/editTextDate"
-            android:layout_width="149dp"
-            android:layout_height="43dp"
-            android:ems="10"
-            android:hint="Tanggal"
-            android:inputType="date"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.106"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.771" />
-
-        <EditText
-            android:id="@+id/editTextTime2"
-            android:layout_width="152dp"
-            android:layout_height="43dp"
-            android:ems="10"
-            android:hint="Waktu"
-            android:inputType="time"
-            app:layout_constraintBottom_toBottomOf="@+id/editTextDate"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/editTextDate"
-            app:layout_constraintTop_toTopOf="@+id/editTextDate"
-            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/textCsTravel"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
-            android:layout_marginBottom="9dp"
+            android:layout_marginTop="12dp"
             android:text="Choose Travel"
             android:textColor="@color/purple_500"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/editTextDate"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintHorizontal_bias="0.088"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <RelativeLayout
@@ -83,7 +54,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="0dp"
             android:scrollbars="vertical"
-            tools:listitem="@layout/list_choose_travel" />
+            tools:listitem="@layout/item_card_travel_list" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
