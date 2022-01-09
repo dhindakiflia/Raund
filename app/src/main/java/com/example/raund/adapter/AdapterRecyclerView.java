@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.raund.R;
 import com.example.raund.model.ChooseTravel;
+import com.example.raund.model.TravelList;
 
 import java.util.ArrayList;
 
@@ -51,17 +52,19 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
         }
     }
 
-    public void setListChooseTravel(ArrayList<ChooseTravel> listChooseTravel) {
-        ListChooseTravel = listChooseTravel;
-    }
-
     //Click Listener
     OnChooseTravelClickListener listener = null;
     public interface OnChooseTravelClickListener {
         void onClick(View view, ChooseTravel chooseTravel);
     }
+    public void setListChooseTravel(ArrayList<TravelList> listChooseTravel) {
+        this.listener = (OnChooseTravelClickListener) listChooseTravel;
+    }
 
-    public void setListener(OnChooseTravelClickListener listener) {
+
+
+    public void setListener(OnChooseTravelClickListener listener)
+    {
         this.listener = listener;
     }
 

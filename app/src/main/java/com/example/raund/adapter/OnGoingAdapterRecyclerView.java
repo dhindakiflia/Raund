@@ -4,11 +4,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.raund.R;
 import com.example.raund.model.OnGoing;
 
@@ -19,19 +22,25 @@ public class OnGoingAdapterRecyclerView extends RecyclerView.Adapter<OnGoingAdap
     ArrayList<OnGoing> listdata = new ArrayList<>();
 
     public class KelasViewHolder2 extends RecyclerView.ViewHolder implements View.OnClickListener{
-    TextView nama_travel_og, destinationDelivery_og, fromDelivery_og, tgl_departure_og, tgl_arrival_og, jam_datang_og, jam_pergi_og, harga_og;
+    TextView namaTravel, destination, currentloc, departure, arrive,jam_arrive, jam_departure, total;
+    CardView DeliveryCv;
+    ImageView logoDelivery,logoTravel;
     Button BtnReschedule;
     public KelasViewHolder2(@NonNull View itemView) {
         super(itemView);
-        nama_travel_og = itemView.findViewById(R.id.nama_travel_og);
-        fromDelivery_og = itemView.findViewById(R.id.fromDelivery_og);
-        destinationDelivery_og = itemView.findViewById(R.id.destinationDelivery_og);
-        tgl_departure_og = itemView.findViewById(R.id.tgl_departure_og);
-        tgl_arrival_og = itemView.findViewById(R.id.tgl_arrival_og);
-        jam_datang_og = itemView.findViewById(R.id.jam_datang_og);
-        jam_pergi_og = itemView.findViewById(R.id.jam_pergi_og);
-        harga_og = itemView.findViewById(R.id.harga_og);
+        namaTravel = itemView.findViewById(R.id.nama_travel_og);
+        currentloc = itemView.findViewById(R.id.fromDelivery_og);
+        destination = itemView.findViewById(R.id.destinationDelivery_og);
+        departure = itemView.findViewById(R.id.tgl_departure_og);
+        arrive = itemView.findViewById(R.id.tgl_arrival_og);
+        jam_arrive = itemView.findViewById(R.id.jam_datang_og);
+        jam_departure = itemView.findViewById(R.id.jam_pergi_og);
+        total = itemView.findViewById(R.id.harga_og);
         BtnReschedule = itemView.findViewById(R.id.BtnReschedule);
+        DeliveryCv = itemView.findViewById(R.id.DeliveryCv);
+        logoDelivery =(ImageView) itemView.findViewById(R.id.logodelivery);
+        logoTravel =(ImageView) itemView.findViewById(R.id.logotravel);
+//        gambar_travel =(ImageView) itemView.findViewById(R.id.gambar_travel);
         itemView.setOnClickListener(this);
 
     }
@@ -47,6 +56,7 @@ public class OnGoingAdapterRecyclerView extends RecyclerView.Adapter<OnGoingAdap
     public void setListdata(ArrayList<OnGoing> listdata) {
 
         this.listdata = listdata;
+        notifyDataSetChanged();
     }
     //Click Listener
     OnGoingAdapterRecyclerView.OnGoingClickListener listener = null;
@@ -56,6 +66,7 @@ public class OnGoingAdapterRecyclerView extends RecyclerView.Adapter<OnGoingAdap
     public void setListener(OnGoingAdapterRecyclerView.OnGoingClickListener listener) {
         this.listener = listener;
     }
+
 
 
     @NonNull
@@ -72,14 +83,24 @@ public class OnGoingAdapterRecyclerView extends RecyclerView.Adapter<OnGoingAdap
     public void onBindViewHolder(@NonNull KelasViewHolder2 holder, int position) {
         OnGoing ongoing = listdata.get(position);
 
-        holder.nama_travel_og.setText(ongoing.nama_travel_og);
-        holder.fromDelivery_og.setText(ongoing.fromDelivery_og);
-        holder.destinationDelivery_og.setText(ongoing.destinationDelivery_og);
-        holder.tgl_departure_og.setText(ongoing.tgl_departure_og);
-        holder.tgl_arrival_og.setText(ongoing.tgl_arrival_og);
-        holder.jam_datang_og.setText(ongoing.jam_datang_og);
-        holder.jam_pergi_og.setText(ongoing.jam_pergi_og);
-        holder.harga_og.setText(ongoing.harga_og);
+
+        holder.namaTravel.setText(ongoing.nama_travel_og);
+        holder.currentloc.setText(ongoing.fromDelivery_og);
+        holder.destination.setText(ongoing.destinationDelivery_og);
+        holder.departure.setText(ongoing.tgl_departure_og);
+        holder.arrive.setText(ongoing.tgl_arrival_og);
+        holder.jam_arrive.setText(ongoing.jam_datang_og);
+        holder.jam_departure.setText(ongoing.jam_pergi_og);
+        holder.total.setText(Integer.toString(ongoing.harga_og));
+        if(ongoing.jenis==1) {
+            Glide.with(holder.itemView.getContext())
+                    .load(R.drawable.kotaktravel)
+                    .into(holder.logoTravel);
+        }else {
+            Glide.with(holder.itemView.getContext())
+                    .load(R.drawable.ic_delivery)
+                    .into(holder.logoTravel);
+        }
 
     }
 

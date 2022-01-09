@@ -1,20 +1,31 @@
 package com.example.raund.adapter;
 
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.example.raund.HistoryActivity;
 import com.example.raund.R;
 import com.example.raund.model.History;
+import com.example.raund.model.OnGoing;
+
 import java.util.ArrayList;
 
 public class AdapterRecylerView extends RecyclerView.Adapter<AdapterRecylerView.KelasViewHolder> {
 
     ArrayList<History> listdata = new ArrayList<>();
 
-    public class KelasViewHolder extends RecyclerView.ViewHolder{
+
+
+
+    public class KelasViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView nama_travelh,
                 destinationDelivery,
                 fromDelivery,
@@ -23,6 +34,8 @@ public class AdapterRecylerView extends RecyclerView.Adapter<AdapterRecylerView.
                 jam_datang2,
                 jam_pergi2,
                 harga2;
+        CardView TravelCv;
+        ImageView logoTravel;
 
         public KelasViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -34,12 +47,31 @@ public class AdapterRecylerView extends RecyclerView.Adapter<AdapterRecylerView.
             jam_datang2 = itemView.findViewById(R.id.jam_datang2);
             jam_pergi2 = itemView.findViewById(R.id.jam_pergi2);
             harga2 = itemView.findViewById(R.id.harga2);
-    }
+            TravelCv = itemView.findViewById(R.id.TravelCv);
+            logoTravel =(ImageView) itemView.findViewById(R.id.imageView19);
+            itemView.setOnClickListener(this);
+        }
 
 
+        @Override
+        public void onClick(View view) {
+            if (listener != null){
+                listener.onClick(view, listdata.get(getAdapterPosition()));
+            }
+        }
     }
     public void setListdata(ArrayList<History> listdata) {
         this.listdata = listdata;
+        notifyDataSetChanged();
+    }
+
+    //Click Listener
+    AdapterRecylerView.HistoryClickListener listener = null;
+    public interface HistoryClickListener {
+        void onClick(View view, History history);
+    }
+    public void setListener(AdapterRecylerView.HistoryClickListener listener) {
+        this.listener = listener;
     }
 
     @NonNull
@@ -62,7 +94,16 @@ public class AdapterRecylerView extends RecyclerView.Adapter<AdapterRecylerView.
         holder.tgl_arrival2.setText(history.tgl_arrival2);
         holder.jam_datang2.setText(history.jam_datang2);
         holder.jam_pergi2.setText(history.jam_pergi2);
-        holder.harga2.setText(history.harga2);
+        holder.harga2.setText(Integer.toString(history.harga2));
+        if(history.jenis==1) {
+            Glide.with(holder.itemView.getContext())
+                    .load(R.drawable.kotaktravel)
+                    .into(holder.logoTravel);
+        }else {
+            Glide.with(holder.itemView.getContext())
+                    .load(R.drawable.ic_delivery)
+                    .into(holder.logoTravel);
+        }
 
     }
 

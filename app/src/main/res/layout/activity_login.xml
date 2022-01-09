@@ -59,7 +59,7 @@
             android:layout_centerVertical="true">
 
             <EditText
-                android:id="@+id/inputemaillogin"
+                android:id="@+id/inputEmailLogin"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
 
@@ -70,10 +70,10 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/inputpasslogin"
+                android:id="@+id/inputPassLogin"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/inputemaillogin"
+                android:layout_below="@id/inputEmailLogin"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/form"
                 android:hint="Password"
@@ -84,10 +84,11 @@
                 android:id="@+id/BtnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/inputpasslogin"
+                android:layout_below="@id/inputPassLogin"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/form_pink"
                 android:elevation="10dp"
+                android:onClick="checkLogin"
                 android:paddingLeft="10dp"
                 android:text="Sign-In"
                 android:textAlignment="center"
